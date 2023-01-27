@@ -19,7 +19,7 @@
     
     //echo "Hello ". $_GET['name'];
     ?> -->
-    <?="Hello " . $_GET['name']; ?>
+    <?="Hello " . htmlspecialchars($_GET['name']); ?>
 </h1>
 </body>
 </html>
