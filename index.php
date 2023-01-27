@@ -15,10 +15,11 @@
 </style>
 <body>
 <h1>
-    <?php
+    <!-- <?php
     
-    echo "Hello ". $_GET['name'];
-    ?>
+    //echo "Hello ". $_GET['name'];
+    ?> -->
+    <?="Hello " . $_GET['name']; ?>
 </h1>
 </body>
 </html>
