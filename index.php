@@ -16,8 +16,8 @@
 <body>
 <h1>
     <?php
-    $name = $_GET['name'];
-    echo "Hello ". $name;
+    
+    echo "Hello ". $_GET['name'];
     ?>
 </h1>
 </body>
