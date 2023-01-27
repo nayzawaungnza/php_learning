@@ -1,11 +1,24 @@
-<?php
-$greeting = "hello world";
-echo $greeting;
-$firstName = "Nay Zaw";
-$lastName = "Aung";
-echo $firstName . ' ' . $lastName;
-
-$name = "Thin";
-echo '$name zar';//single code not understant variable
-echo "$name zar"; //double code understant variable
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Learngin</title>
+</head>
+<style>
+    body{
+        background-color: gray;
+        padding: 2em;
+        text-align: center;
+    }
+</style>
+<body>
+<h1>
+    <?php
+    $name = $_GET['name'];
+    echo "Hello ". $name;
+    ?>
+</h1>
+</body>
+</html>
