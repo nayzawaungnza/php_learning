@@ -27,6 +27,9 @@
         <?php echo "<li>$name</li> "; ?>
         <?php endforeach; ?>
     </ul>
+    <?php foreach( $person as $key=>$feature) :?>
+    <p><?= $key. "-". $feature; ?></p>
+    <?php endforeach; ?>
 
     <!-- <?php
     
