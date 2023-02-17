@@ -16,6 +16,18 @@
 <body>
 <h1>
     <?= $greeting ?>
+    <ul>
+        <!-- <?php
+        // foreach ($names as $name) {
+        //     echo "<li>$name</li> ";
+        // }
+        ?> -->
+
+        <?php foreach ($names as $name) : ?>
+        <?php echo "<li>$name</li> "; ?>
+        <?php endforeach; ?>
+    </ul>
+
     <!-- <?php
     
     //echo "Hello ". $_GET['name'];
