@@ -9,9 +9,15 @@ $person = [
     "hair" => "brown",
 ];
 
-echo "<pre>";
-print_r($person);
-die();
+$task = [
+    "title"=>"finish work",
+    "due"=>"today",
+    "complete"=>true,
+];
+
+//echo "<pre>";
+//print_r($person);
+//die();
 // foreach ($names as $name) {
 //     echo $name . ", ";
 // }

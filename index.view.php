@@ -31,6 +31,10 @@
     <p><?= $key. "-". $feature; ?></p>
     <?php endforeach; ?>
 
+    <p>task title is <?php echo $task['title'] ?></p>
+    <p>task due date is <?php echo $task['due'] ?> </p>
+    <?php echo $task['complete'] ? "complete":"incomplete"; ?>
+
     <!-- <?php
     
     //echo "Hello ". $_GET['name'];
