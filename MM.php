@@ -31,6 +31,3 @@ $states['MM'] = array(
   'TNT' => 'Tanintharyi Region (တနင်္သာရီတိုင်းဒေသကြီး)',
   'YGN' => 'Yangon Region (ရန်ကုန်တိုင်းဒေသကြီး)',
 );
-
-// Use this filter to handle the States, Regions, and Union Territories of Myanmar
-$states['MM'] = apply_filters('scpwoo_custom_states_mm', $states['MM']);
