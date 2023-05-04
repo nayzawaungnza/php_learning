@@ -4,8 +4,7 @@
  * Townships of Myanmar
  * - 278 townships
  *
- * @author  Hein Htet Kyaw <mr.kiddomonster@gmail.com>
- * @version 1.0.0
+ 
  * @license http://www.gnu.org/licenses/gpl-2.0.html
  */
 
@@ -394,5 +393,3 @@ $places['MM'] = array(
   ),
 );
 
-// Use this filter to handle the Townships of Myanmar
-$places['MM'] = apply_filters('scpwoo_custom_places_mm', $places['MM']);
