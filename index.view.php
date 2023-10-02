@@ -18,6 +18,7 @@
 <h1>
     <?= $greeting ?>
     <ul>
+        <li>person name is <?php echo ucwords($personBio['name']); ?></li>
     <li>He is
         <?php if($personBio['isMarried']): ?>
             married.

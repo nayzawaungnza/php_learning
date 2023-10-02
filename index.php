@@ -9,6 +9,17 @@ $personBio = [
     "hair" => "brown",
     "isMarried" => false,
 ];
+function name($name, $age=22){
+    echo "my name is $name, age is $age";
+}
+name($personBio['name']);
+
+function dd($data){
+    echo "<pre>";
+    die(var_dump($data));
+}
+
+dd($personBio);
 //echo $personBio['isMarried'] ? "Married":"NotMarried";
 // if ($personBio['isMarried']) {
 //     echo "Married";
