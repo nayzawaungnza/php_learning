@@ -1,4 +1,5 @@
 <?php
+require('functions.php');
 $greeting = "Hello World";
 
 //$names = ["Nay Nay", "Zaw Zaw", "Aung Aung"];
@@ -14,10 +15,7 @@ function name($name, $age=22){
 }
 name($personBio['name']);
 
-function dd($data){
-    echo "<pre>";
-    die(var_dump($data));
-}
+
 
 dd($personBio);
 //echo $personBio['isMarried'] ? "Married":"NotMarried";
