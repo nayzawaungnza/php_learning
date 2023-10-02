@@ -5,40 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Learngin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/argon-design-system-free@1.2.0/assets/css/argon-design-system.min.css">
 </head>
 <style>
     body{
-        background-color: gray;
+        /* background-color: gray;
         padding: 2em;
-        text-align: center;
+        text-align: left; */
     }
 </style>
 <body>
 <h1>
     <?= $greeting ?>
     <ul>
-        <!-- <?php
-        // foreach ($names as $name) {
-        //     echo "<li>$name</li> ";
-        // }
-        ?> -->
-
-        <?php foreach ($names as $name) : ?>
+    <li>He is
+        <?php if($personBio['isMarried']): ?>
+            married.
+        <?php else: ?>
+                not married.
+        <?php endif; ?>
+    </li>
+        <!-- <?php foreach ($names as $name) : ?>
         <?php echo "<li>$name</li> "; ?>
-        <?php endforeach; ?>
+        <?php endforeach; ?> -->
     </ul>
-    <?php foreach( $person as $key=>$feature) :?>
-    <p><?= $key. "-". $feature; ?></p>
-    <?php endforeach; ?>
-
-    <p>task title is <?php echo $task['title'] ?></p>
-    <p>task due date is <?php echo $task['due'] ?> </p>
-    <?php echo $task['complete'] ? "complete":"incomplete"; ?>
-
-    <!-- <?php
     
-    //echo "Hello ". $_GET['name'];
-    ?> -->
     
 </h1>
 </body>
