@@ -30,5 +30,13 @@
     
 <?php endforeach; ?>
 </ul>
+<ul>
+    <?php foreach ($users as $key => $user): ?>
+        <li>
+           Name : <?= $user->name;?>, Email : <?= $user->email;?>, Phone : <?= $user->phone;?>
+        </li>
+        
+    <?php endforeach; ?>
+</ul>
 </body>
 </html>

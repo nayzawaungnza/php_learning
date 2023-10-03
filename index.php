@@ -1,10 +1,9 @@
 <?php
-require "functions.php";
-//connection mysql database
-$pdo = dbConnection();
+require "./bootstart.php";
 
-//fetch tasks
-$tasks = fetchTasks($pdo);
+$tasks = $query->selectAll("tasks");
+$users = $query->selectAll("users");
+//dd($users);
 //echo "<pre>";
 //print_r($statement->fetchAll());
 //print_r($statement->fetchAll(PDO::FETCH_ASSOC));
