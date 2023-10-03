@@ -17,7 +17,7 @@ name($personBio['name']);
 
 
 
-dd($personBio);
+//dd($personBio);
 //echo $personBio['isMarried'] ? "Married":"NotMarried";
 // if ($personBio['isMarried']) {
 //     echo "Married";

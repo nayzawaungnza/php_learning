@@ -3,26 +3,33 @@ function dd($data){
     echo "<pre>";
     die(var_dump($data));
 }
-
+//Has 3 of Access Modifier : public , private, protected
 class Car{
-    public static function startEngine(){//static method not allow use for $this keyword
-        echo "Car Start Engine.<br>";
-        return new Car;
+    // public static function startEngine(){//static method not allow use for $this keyword
+    //     echo "Car Start Engine.<br>";
+    //     return new Car;
+    // }
+    protected $carName;
+    public function __construct($carName)
+    {
+        $this->carName=$carName;
     }
-    public function drive(){
-        echo "Car is driving.<br>";
-        return new Car;
+    private function drive(){
+        echo "$this->carName is driving.<br>";
     }
-    public function stop(){
-        echo "Car stopped.<br>";
+    public function getDrive(){
+        $this->drive();
     }
-    public function whatisthis(){
-        return $this;
-    }
+    // public function stop(){
+    //     echo "Car stopped.<br>";
+    // }
+    // public function whatisthis(){
+    //     return $this;
+    // }
 }
-Car::startEngine()->drive()->stop();//for used static function
+//Car::startEngine()->drive()->stop();//for used static function
 
-$car = new Car();
-$car->drive();
-$car->stop();
-print_r($car->whatisthis()->stop());
+$car = new Car("KIA");
+$car->getDrive();
+//$car->stop();
+//print_r($car->whatisthis()->stop());
