@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-6 collapse-brand">
             <a href="javascript:void(0)">
-              <img src="../../assets/img/brand/blue.png">
+              <img src="../views/assets/img/brand/blue.png">
             </a>
           </div>
           <div class="col-6 collapse-close">
