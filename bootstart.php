@@ -1,4 +1,5 @@
 <?php
+$config = require "config.php";
 require "functions.php";
 require "database/Connection.php";
 require "database/QueryBuilder.php";
@@ -11,5 +12,5 @@ require "database/QueryBuilder.php";
 //fetch tasks
 //$query = new QueryBuilder($pdo);
 $query = new QueryBuilder(
-    Connection::make()
+    Connection::make($config['database'])
 );

@@ -1,5 +1,5 @@
 <?php
-require "./bootstart.php";
+require "bootstart.php";
 
 $tasks = $query->selectAll("tasks");
 $users = $query->selectAll("users");
