@@ -1,41 +1,13 @@
 <?php
-require('functions.php');
-$greeting = "Hello World";
+require "functions.php";
+//connection mysql database
+$pdo = dbConnection();
 
-//$names = ["Nay Nay", "Zaw Zaw", "Aung Aung"];
-
-$personBio = [
-    "name" => "nay zaw",
-    "age" => 20,
-    "hair" => "brown",
-    "isMarried" => false,
-];
-function name($name, $age=22){
-    echo "my name is $name, age is $age";
-}
-name($personBio['name']);
-
-
-
-//dd($personBio);
-//echo $personBio['isMarried'] ? "Married":"NotMarried";
-// if ($personBio['isMarried']) {
-//     echo "Married";
-// }else{
-//     echo "Not Married";
-// }
-// $task = [
-//     "title"=>"finish work",
-//     "due"=>"today",
-//     "complete"=>true,
-// ];
-
-//var_dump($names);
+//fetch tasks
+$tasks = fetchTasks($pdo);
 //echo "<pre>";
-//print_r($person);
-//die();
-// foreach ($names as $name) {
-//     echo $name . ", ";
-// }
-//die();
+//print_r($statement->fetchAll());
+//print_r($statement->fetchAll(PDO::FETCH_ASSOC));
+//print_r($statement->fetchAll(PDO::FETCH_OBJ));
+
 require "index.view.php";

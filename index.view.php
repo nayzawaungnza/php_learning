@@ -15,23 +15,20 @@
     }
 </style>
 <body>
-<h1>
-    <?= $greeting ?>
-    <ul>
-        <li>person name is <?php echo ucwords($personBio['name']); ?></li>
-    <li>He is
-        <?php if($personBio['isMarried']): ?>
-            married.
-        <?php else: ?>
-                not married.
-        <?php endif; ?>
+<h1 class="text-center">  PHP Learning </h1>
+<ul>
+<?php foreach ($tasks as $key => $task): ?>
+    <li>
+        <?php
+            if($task->complete){
+                echo "<strike class='text-success'>$task->description</strike>";
+            }else{
+                echo "<em>$task->description</em>";
+            }
+         ?>
     </li>
-        <!-- <?php foreach ($names as $name) : ?>
-        <?php echo "<li>$name</li> "; ?>
-        <?php endforeach; ?> -->
-    </ul>
     
-    
-</h1>
+<?php endforeach; ?>
+</ul>
 </body>
 </html>
