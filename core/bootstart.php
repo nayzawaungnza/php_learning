@@ -13,6 +13,6 @@ require "core/database/QueryBuilder.php";
 
 //fetch tasks
 //$query = new QueryBuilder($pdo);
-$query = new QueryBuilder(
+$database = new QueryBuilder(
     Connection::make($config['database'])
 );

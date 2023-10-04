@@ -13,10 +13,10 @@ class Router
         return $router;
     }
 
-    public function register($routes)
-    {
-        $this->routes = $routes;
-    }
+    // public function register($routes)
+    // {
+    //     $this->routes = $routes;
+    // }
 
     public function get($uri,$controller)
     {

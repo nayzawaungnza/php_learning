@@ -1,4 +1,4 @@
 <?php
-$tasks = $query->selectAll("tasks");
-$users = $query->selectAll("users");
+$tasks = $database->selectAll("tasks");
+$users = $database->selectAll("users");
 require "views/about.view.php";

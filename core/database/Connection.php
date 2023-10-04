@@ -1,5 +1,6 @@
 <?php
-class Connection{
+class Connection
+{
     public static function make($config){
         try{
             return $pdo = new PDO(

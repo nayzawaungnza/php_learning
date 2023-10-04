@@ -3,14 +3,26 @@
 <h1 class="text-center">  PHP Learning </h1>
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
+            <ul>
+                <?php foreach ($users as $key => $user):?>
+                    <li>
+                        <?php echo "Name :  $user->name, Mail : $user->email, Phone : $user->phone";?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <div class="col-md-6">
             <div class="card card-body shado">
                 <form action="/name" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Enter your name" id="name" class="form-control">
+                        <input type="text" name="txtname" placeholder="Enter your name" id="name" class="form-control">
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Enter your email" id="email" class="form-control">
+                        <input type="email" name="txtemail" placeholder="Enter your email" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="txtphone" placeholder="Enter your Phone" id="phone" class="form-control">
                     </div>
                     <input type="submit" value="Submit" class="btn btn-dark">
                 </form>
