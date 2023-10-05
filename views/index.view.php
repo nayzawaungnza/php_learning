@@ -4,10 +4,19 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
+            <?php //dd($users); ?>
             <ul>
                 <?php foreach ($users as $key => $user):?>
                     <li>
                         <?php echo "Name :  $user->name, Mail : $user->email, Phone : $user->phone";?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+
+            <ul>
+                <?php foreach ($tasks as $key => $task):?>
+                    <li>
+                        <?php echo "Name :  $task->description, $task->complete";?>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -32,35 +41,35 @@
 </div>
 
 <?php 
-class Post{
-    public $postTitle;
-    public $postPublish;
-    public function __construct($postTitle,$postPublish)
-    {
-        $this->title = $postTitle;
-        $this->publish = $postPublish;
-    }
-}
-$posts = [
-    new Post("post 1",true),
-    new Post("post 2",false),
-    new Post("post 3",true),
-    new Post("post 4",true),
-];
+// class Post{
+//     public $postTitle;
+//     public $postPublish;
+//     public function __construct($postTitle,$postPublish)
+//     {
+//         $this->title = $postTitle;
+//         $this->publish = $postPublish;
+//     }
+// }
+// $posts = [
+//     new Post("post 1",true),
+//     new Post("post 2",false),
+//     new Post("post 3",true),
+//     new Post("post 4",true),
+// ];
 
-$postUnPublish = array_filter($posts,function($post){
-    return !$post->publish;
-});
-echo "<pre>";
-var_dump($postUnPublish);
+// $postUnPublish = array_filter($posts,function($post){
+//     return !$post->publish;
+// });
+// echo "<pre>";
+// var_dump($postUnPublish);
 
 
-$titles = array_map(function($post){
-    return $post->title;
-},$posts);
+// $titles = array_map(function($post){
+//     return $post->title;
+// },$posts);
 
-echo "<pre>";
-var_dump($titles);
+// echo "<pre>";
+// var_dump($titles);
 ?>
 
 <?php require "views/partials/footer.php"; ?>
