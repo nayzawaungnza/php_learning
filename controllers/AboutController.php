@@ -1,6 +1,6 @@
 <?php
-$tasks = $database->selectAll("tasks");
-$users = $database->selectAll("users");
+$tasks = App::get("database")->selectAll("tasks");
+$users = App::get("database")->selectAll("users");
 
 
 view("about",[
