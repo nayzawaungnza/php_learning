@@ -1,4 +1,5 @@
 <?php
+namespace core;//use namespace for same class "App" 
 class App
 {
     protected static $datas = [];
