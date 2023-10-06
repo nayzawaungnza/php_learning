@@ -25,4 +25,9 @@ class UserController
         
         
     }
+
+    public function delete($id)
+    {
+        dd($id);
+    }
 }

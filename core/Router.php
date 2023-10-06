@@ -25,6 +25,7 @@ class Router
 
     public function direct($uri,$method)
     {
+        //dd($this->routes[$method][$uri]);
         if(!array_key_exists($uri,$this->routes[$method])){
             die("404 Page");
         }

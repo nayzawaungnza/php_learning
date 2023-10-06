@@ -9,6 +9,7 @@
                 <?php foreach ($users as $key => $user):?>
                     <li>
                         <?php echo "Name :  $user->name, Mail : $user->email, Phone : $user->phone";?>
+                        <a href="/user/delete/<?php echo $user->id ?>" class="btn btn-sm btn-danger">delete</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
