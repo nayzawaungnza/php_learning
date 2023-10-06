@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-6">
             <div class="card card-body shado">
-                <form action="/name" method="POST">
+                <form action="/create-user" method="POST">
                     <div class="form-group">
                         <input type="text" name="txtname" placeholder="Enter your name" id="name" class="form-control">
                     </div>

@@ -34,6 +34,9 @@
         <li class="nav-item">
           <a class="nav-link" href="/order">Order</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">Users</a>
+        </li>
         
       </ul>
     </div>
