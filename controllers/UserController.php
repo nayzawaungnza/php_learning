@@ -16,12 +16,9 @@ class UserController
             "email" => $_POST['txtemail'],
             "phone" => $_POST['txtphone'],
         ],"users");
-        Header("Location: /");
-        // return view("index",[
-        //     "success" => "User create Successfully."
-        // ]);
-
-        //$_SESSION['success'] = "User created successfully.";
+        
+        return redirect('/');
+        
         
         
     }
