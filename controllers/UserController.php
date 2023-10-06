@@ -12,9 +12,9 @@ class UserController
     public function createUser()
     {
         App::get("database")->insert([
-            "name" => $_POST['txtname'],
-            "email" => $_POST['txtemail'],
-            "phone" => $_POST['txtphone'],
+            "name" => request('txtname'),
+            "email" => request('txtemail'),
+            "phone" => request('txtphone'),
         ],"users");
         
         return redirect('/');
