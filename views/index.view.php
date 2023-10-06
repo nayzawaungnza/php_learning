@@ -22,7 +22,23 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <div class="card card-body shado">
+            <div class="card card-body shadow">
+
+                <?php 
+                if (isset($success)): ?>
+
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-inner--text"><strong>Success!</strong> <?php echo $success; ?></span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    
+                <?php 
+                    
+                    endif;
+                ?>
                 <form action="/create-user" method="POST">
                     <div class="form-group">
                         <input type="text" name="txtname" placeholder="Enter your name" id="name" class="form-control">

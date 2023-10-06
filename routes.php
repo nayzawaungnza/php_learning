@@ -17,6 +17,6 @@ $router->get("","PagesController@home");
 $router->get("about","PagesController@about");
 $router->get("contact","PagesController@contact");
 $router->get("order","PagesController@order");
-$router->post("create-user","PagesController@createUser");
+$router->post("create-user","UserController@createUser");
 
 $router->get("users","UserController@index");
