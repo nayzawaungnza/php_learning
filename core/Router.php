@@ -29,7 +29,8 @@ class Router
             die("404 Page");
         }
         
-        $parts = explode("@",$this->routes[$method][$uri]);
+        //$parts = explode("@",$this->routes[$method][$uri]);
+        $parts = $this->routes[$method][$uri];
            //return $this->routes[$method][$uri];
         $this->callMethod($parts[0], $parts[1]);
         //dd($this->routes[$method][$uri]);
