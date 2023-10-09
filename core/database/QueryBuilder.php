@@ -34,10 +34,15 @@ class QueryBuilder
 
     }
 
-    // public function delete($table, $id)
-    // {
-    //     $statement = $this->pdo->prepare("DELETE FROM $table WHERE id = :id");
-    //     $statement->bindParam(':id', $id, PDO::PARAM_INT);
-    //     $statement->execute();
-    // }
+    public function delete($table, $id)
+{
+    // Prepare the SQL query with a placeholder for the ID
+    $statement = $this->pdo->prepare("DELETE FROM $table WHERE id = :id");
+    
+    // Bind the ID parameter to the prepared statement and specify it as an integer
+    $statement->bindParam(':id', $id, PDO::PARAM_INT);
+    
+    // Execute the query, which will delete the record with the specified ID
+    $statement->execute();
+}
 }

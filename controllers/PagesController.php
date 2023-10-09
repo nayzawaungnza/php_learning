@@ -14,7 +14,7 @@ class PagesController
 
     }
 
-    public function about()
+    public function about_about()
     {
         $tasks = App::get("database")->selectAll("tasks");
         $users = App::get("database")->selectAll("users");
