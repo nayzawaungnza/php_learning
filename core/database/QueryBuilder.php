@@ -13,8 +13,7 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function insert($insertDataArr,$table)
-    {
+    public function insert($insertDataArr,$table){
         $dataColumns = array_keys($insertDataArr);
         $columns = implode(",", $dataColumns);
         //dd($columns);
@@ -26,18 +25,22 @@ class QueryBuilder
         $questionMark = rtrim($questionMark,",");//remove , in end of value
 
         $sql = "insert into $table ($columns) value ($questionMark)";
+        //dd($sql);
         $statement = $this->pdo->prepare($sql);
 
         $dataValues = array_values($insertDataArr);
-    
+        //dd($dataValues);
+        //$values = implode(",", $dataValues);
+        //dd($values);
         $statement->execute($dataValues);
 
+        
     }
 
-    // public function delete($table, $id)
-    // {
-    //     $statement = $this->pdo->prepare("DELETE FROM $table WHERE id = :id");
-    //     $statement->bindParam(':id', $id, PDO::PARAM_INT);
-    //     $statement->execute();
-    // }
+    public function delete($id, $table){
+        $statement = $this->pdo->prepare("DELETE FROM $table WHERE id = :id");
+        $statement->bindParam(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+    }
+
 }

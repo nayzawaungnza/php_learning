@@ -1,15 +1,35 @@
-<?php require "views/partials/header.php"; ?>
+<?php require "views/partials/header.php"; 
+AuthMiddleware::handle();
+?>
 
 <h1 class="text-center">  PHP Learning </h1>
 <div class="container">
     <div class="row">
+        <div class="col-md-12">
+
+        <?php if(request('success')){
+                $success =  request('success');
+        }else{
+            $success = null;
+        }
+        if( $success !== null): ?>
+             <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-inner--text"><strong>Success! <?php echo $success; ?></strong> </span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+            <?php else: ?>
+        <?php  endif; ?>
+        </div>
         <div class="col-md-6">
             <?php //dd($users); ?>
             <ul>
                 <?php foreach ($users as $key => $user):?>
                     <li>
                         <?php echo "Name :  $user->name, Mail : $user->email, Phone : $user->phone";?>
-                        <a href="/user/delete/<?php echo $user->id ?>" class="btn btn-sm btn-danger">delete</a>
+                        <a href="/users/delete?id=<?php echo $user->id ?>" class="btn btn-sm btn-danger">delete</a>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -24,22 +44,6 @@
         </div>
         <div class="col-md-6">
             <div class="card card-body shadow">
-
-                <?php 
-                if (isset($success)): ?>
-
-                    <div class="alert alert-success alert-dismissible fade show" role="alert">
-                        <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
-                        <span class="alert-inner--text"><strong>Success!</strong> <?php echo $success; ?></span>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    
-                <?php 
-                    
-                    endif;
-                ?>
                 <form action="/create-user" method="POST">
                     <div class="form-group">
                         <input type="text" name="txtname" placeholder="Enter your name" id="name" class="form-control">
@@ -90,3 +94,5 @@
 ?>
 
 <?php require "views/partials/footer.php"; ?>
+use auth\Middleware;
+

@@ -7,8 +7,9 @@ class UserController
     public function index()
     {
         $users = App::get("database")->selectAll("users");
+        //print_r($users);
         return view("users",[
-            "users" => $users
+            "users" => $users,
         ]);
     }
 
@@ -20,14 +21,15 @@ class UserController
             "phone" => request('txtphone'),
         ],"users");
         
-        return redirect('/');
+        $success = ['success' => 'User created successfully'];
+        return redirect('/', $success);
         
         
         
     }
 
-    public function delete($id)
-    {
-        dd($id);
+    public function deleteUser(){
+        App::get("database")->delete(request('id'),"users");
+        return redirect('/?success=1');
     }
 }

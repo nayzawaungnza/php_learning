@@ -8,6 +8,12 @@ class Connection
                 "{$config['db_username']}",
                 "{$config['db_password']}"
             );
+            // return $pdo = new PDO(
+            //     "{$config['db_connection']}:server={$config['db_host']};Database={$config['db_name']}",
+
+            //     "{$config['db_username']}",
+            //     "{$config['db_password']}"
+            // );
             //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo "Connected successfully";
         }catch(PDOException $e){

@@ -1,4 +1,6 @@
 <?php
+
+use core\App;
 //database from received core/bootstart.php
 $tasks = App::get("database")->selectAll("tasks");
 $users = App::get("database")->selectAll("users");
@@ -6,5 +8,6 @@ $users = App::get("database")->selectAll("users");
 
 view("index",[
     "users" => $users,
-    "tasks" => $tasks
+    "tasks" => $tasks,
+    "success" => 0,
 ]);

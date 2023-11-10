@@ -9,12 +9,13 @@ class PagesController
         $users = App::get("database")->selectAll("users");
         view("index",[
             "users" => $users,
-            "tasks" => $tasks
+            "tasks" => $tasks,
+            "success" => 0,
         ]);
 
     }
 
-    public function about()
+    public function about_about()
     {
         $tasks = App::get("database")->selectAll("tasks");
         $users = App::get("database")->selectAll("users");

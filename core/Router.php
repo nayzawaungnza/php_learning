@@ -25,13 +25,13 @@ class Router
 
     public function direct($uri,$method)
     {
-        //dd($this->routes[$method][$uri]);
         if(!array_key_exists($uri,$this->routes[$method])){
             die("404 Page");
         }
         
         //$parts = explode("@",$this->routes[$method][$uri]);
         $parts = $this->routes[$method][$uri];
+        //dd($parts);
            //return $this->routes[$method][$uri];
         $this->callMethod($parts[0], $parts[1]);
         //dd($this->routes[$method][$uri]);

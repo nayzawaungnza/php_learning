@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AuthMiddleware' => $baseDir . '/auth/AuthMiddleware.php',
     'ComposerAutoloaderInite58dc49370c3214f2960e161df517e8d' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInite58dc49370c3214f2960e161df517e8d' => $vendorDir . '/composer/autoload_static.php',
@@ -14,6 +15,7 @@ return array(
     'QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'Request' => $baseDir . '/core/Request.php',
     'Router' => $baseDir . '/core/Router.php',
+    'controllers\\AuthController' => $baseDir . '/controllers/AuthController.php',
     'controllers\\PagesController' => $baseDir . '/controllers/PagesController.php',
     'controllers\\UserController' => $baseDir . '/controllers/UserController.php',
     'core\\App' => $baseDir . '/core/App.php',

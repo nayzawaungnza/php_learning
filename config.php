@@ -8,3 +8,13 @@ return [
         "db_password" => "",
     ]
 ];
+
+// return [
+//     "database"=>[
+//         "db_connection" => "sqlsrv",
+//         "db_host" => "DESKTOP-BEBFCGT\SQLEXPRESS",
+//         "db_name" => "entryform",
+//         "db_username" => "admin",
+//         "db_password" => "",
+//     ]
+// ];
