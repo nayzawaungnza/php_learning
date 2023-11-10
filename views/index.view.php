@@ -29,7 +29,11 @@ AuthMiddleware::handle();
                 <?php foreach ($users as $key => $user):?>
                     <li>
                         <?php echo "Name :  $user->name, Mail : $user->email, Phone : $user->phone";?>
+<<<<<<< HEAD
                         <a href="/users/delete?id=<?php echo $user->id ?>" class="btn btn-sm btn-danger">delete</a>
+=======
+                        <a href="/users/delete/<?php echo $user->id ?>" class="btn btn-sm btn-danger">delete</a>
+>>>>>>> 7300e852b61932712b4fe368c440f546aab9a426
                     </li>
                 <?php endforeach; ?>
             </ul>
