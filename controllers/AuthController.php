@@ -16,6 +16,7 @@ class AuthController{
     public function register(){
         view("register");
     }
+
     public function store(){
         $dataToValidate = [
             "txtname" => request('txtname'),
@@ -62,5 +63,31 @@ class AuthController{
         Redirect::back();
         exit; // Ensure to exit after the redirect
     //return redirect('/login');
+    }
+
+    public function authcheck(){
+        $dataToValidate = [
+            "txtemail" => request('txtemail'),
+            "txtpassword" => request('txtpassword'),
+        ];
+
+        $validator = new Validator($dataToValidate);
+        
+        $rules = [
+            'txtemail' => 'required|email',
+            'txtpassword' => 'required|min:8',
+        ];
+
+        
+        
+        $errors = $validator->validate($rules);
+      
+        if (!empty($errors)) {
+            Session::start();
+            Session::set('errors', $errors);
+            Session::set('inputs', $dataToValidate);
+            Redirect::back();
+            exit; // Ensure to exit after the redirect
+        }
     }
 }

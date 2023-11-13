@@ -32,14 +32,24 @@ Session::set('success', null);
     <div class="col-md-6 offset-3 pt-4">
             <div class="card card-body shadow">
             <h1 class="text-center">Login</h1>
-                <form action="<?php echo route("register") ?>" method="POST">
+                <form action="<?php echo route("login") ?>" method="POST">
                    
                     <div class="form-group">
-                        <input type="email" name="txtemail" placeholder="Enter your email" id="email" class="form-control">
+                        <input type="email" name="txtemail" placeholder="Enter your email" id="email" class="form-control" value="<?php echo htmlspecialchars($inputData['txtemail'] ?? ''); ?>">
+                        <?php if (!empty($errors['txtemail'])): ?>
+                            <?php foreach ($errors['txtemail'] as $error): ?>
+                                <span class="text-danger"><?php echo $error; ?></span>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                     
                     <div class="form-group">
                         <input type="password" name="txtpassword" placeholder="Enter your Password" id="password" class="form-control">
+                        <?php if (!empty($errors['txtpassword'])): ?>
+                            <?php foreach ($errors['txtpassword'] as $error): ?>
+                                <span class="text-danger"><?php echo $error; ?></span>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                     
                     

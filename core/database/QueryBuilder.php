@@ -13,6 +13,12 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_OBJ);
     }
 
+    public function selectWhere($table){
+        $statement = $this->pdo->prepare("select * from $table");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function insert($insertDataArr,$table){
         $dataColumns = array_keys($insertDataArr);
         $columns = implode(",", $dataColumns);

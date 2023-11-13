@@ -13,6 +13,8 @@ $router->get('users/delete',[UserController::class,'deleteUser']);
 $router->get('users',[UserController::class,'index']);
 
 $router->get('login',[AuthController::class,'login']);
+$router->post('login',[AuthController::class,'authcheck']);
 
-$router->post('register',[AuthController::class,'store']);
 $router->get('register',[AuthController::class,'register']);
+$router->post('register',[AuthController::class,'store']);
+
