@@ -19,4 +19,7 @@ return array(
     'controllers\\PagesController' => $baseDir . '/controllers/PagesController.php',
     'controllers\\UserController' => $baseDir . '/controllers/UserController.php',
     'core\\App' => $baseDir . '/core/App.php',
+    'core\\Redirect' => $baseDir . '/core/Redirect.php',
+    'core\\Session' => $baseDir . '/core/Session.php',
+    'core\\Validator' => $baseDir . '/core/Validator.php',
 );

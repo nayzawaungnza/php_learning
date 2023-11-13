@@ -27,44 +27,15 @@ class Router
 
     public function direct($uri,$method)
     {
-<<<<<<< HEAD
-=======
-        // $postID="";
-        // $routeParts = explode("/",$uri);
-        // $replacement = "{id}";
-        // foreach ($routeParts as &$part) {
-        //     if (is_numeric($part)) {
-        //         $postID = $part;
-        //         $part = $replacement;
-                
-        //     }
-        // }
-        // $routeString = implode("/", $routeParts);
-
-        //dd($routeString);
->>>>>>> 7300e852b61932712b4fe368c440f546aab9a426
         if(!array_key_exists($uri,$this->routes[$method])){
             die("404 Page");
         }
-
-        $parts = $this->routes[$method][$uri];
-<<<<<<< HEAD
-        //dd($parts);
-           //return $this->routes[$method][$uri];
-=======
->>>>>>> 7300e852b61932712b4fe368c440f546aab9a426
-        $this->callMethod($parts[0], $parts[1]);
-        //dd($parts);
-        // if($postID){
-        //     //dd($postID);
-        //     $this->callMethodWithId($parts[0], $parts[1], $postID);
-        // }else{
-        //     $this->callMethod($parts[0], $parts[1]);
-        // }
         
-       
-        //dd($parts);
-       
+        //$parts = explode("@",$this->routes[$method][$uri]);
+        $parts = $this->routes[$method][$uri];
+           //return $this->routes[$method][$uri];
+        $this->callMethod($parts[0], $parts[1]);
+        //dd($this->routes[$method][$uri]);
     }
 
     public function callMethod($class,$method)

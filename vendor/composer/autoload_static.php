@@ -20,6 +20,9 @@ class ComposerStaticInite58dc49370c3214f2960e161df517e8d
         'controllers\\PagesController' => __DIR__ . '/../..' . '/controllers/PagesController.php',
         'controllers\\UserController' => __DIR__ . '/../..' . '/controllers/UserController.php',
         'core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'core\\Redirect' => __DIR__ . '/../..' . '/core/Redirect.php',
+        'core\\Session' => __DIR__ . '/../..' . '/core/Session.php',
+        'core\\Validator' => __DIR__ . '/../..' . '/core/Validator.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
